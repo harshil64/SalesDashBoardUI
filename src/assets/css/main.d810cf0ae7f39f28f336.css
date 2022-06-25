@@ -89,7 +89,7 @@ ul.fancytree-container li.fancytree-lastsib {
 }
 
 ul.fancytree-connectors.fancytree-container li {
-    background-image: url(assets/images/vline.gif);
+    background-image: url(../images/vline.gif);
     background-position: 0 0
 }
 
@@ -114,7 +114,7 @@ span.fancytree-drag-helper-img,
     display: inline-block;
     vertical-align: top;
     background-repeat: no-repeat;
-    background-image: url(assets/images/icons.gif);
+    background-image: url(../images/icons.gif);
     background-position: 0 0
 }
 
@@ -154,7 +154,7 @@ span.fancytree-expander {
 
 .fancytree-connectors .fancytree-exp-n span.fancytree-expander,
 .fancytree-connectors .fancytree-exp-nl span.fancytree-expander {
-    background-image: url(assets/images/icons.gif);
+    background-image: url(../images/icons.gif);
     margin-top: 0
 }
 
@@ -377,7 +377,7 @@ span.fancytree-icon {
 .fancytree-statusnode-loading span.fancytree-icon,
 .fancytree-statusnode-loading span.fancytree-icon:hover,
 span.fancytree-icon.fancytree-icon-loading {
-    background-image: url(assets/images/loading.gif);
+    background-image: url(../images/loading.gif);
     background-position: 0 0
 }
 
@@ -489,7 +489,7 @@ span.fancytree-drag-source.fancytree-drag-remove {
 .fancytree-container.fancytree-rtl span.fancytree-expander,
 .fancytree-container.fancytree-rtl span.fancytree-icon,
 .fancytree-container.fancytree-rtl span.fancytree-drag-helper-img {
-    background-image: url(assets/images/icons-rtl.gif)
+    background-image: url(../images/icons-rtl.gif)
 }
 
 .fancytree-container.fancytree-rtl .fancytree-exp-n span.fancytree-expander,
@@ -499,7 +499,7 @@ span.fancytree-drag-source.fancytree-drag-remove {
 
 .fancytree-container.fancytree-rtl.fancytree-connectors .fancytree-exp-n span.fancytree-expander,
 .fancytree-container.fancytree-rtl.fancytree-connectors .fancytree-exp-nl span.fancytree-expander {
-    background-image: url(assets/images/icons-rtl.gif)
+    background-image: url(../images/icons-rtl.gif)
 }
 
 ul.fancytree-container.fancytree-rtl ul {
@@ -508,7 +508,7 @@ ul.fancytree-container.fancytree-rtl ul {
 
 ul.fancytree-container.fancytree-rtl.fancytree-connectors li {
     background-position: right 0;
-    background-image: url(assets/images/vline-rtl.gif)
+    background-image: url(../images/vline-rtl.gif)
 }
 
 ul.fancytree-container.fancytree-rtl li.fancytree-lastsib,
@@ -517,7 +517,7 @@ ul.fancytree-container.fancytree-rtl.fancytree-no-connector>li {
 }
 
 #fancytree-drop-marker.fancytree-rtl {
-    background-image: url(assets/images/icons-rtl.gif)
+    background-image: url(../images/icons-rtl.gif)
 }
 
 table.fancytree-ext-table {
@@ -12233,7 +12233,7 @@ button,
 .app-header__logo .logo-src {
     height: 23px;
     width: 97px;
-    background: url(assets/images/logo-inverse.png)
+    background: url(../images/logo-inverse.png)
 }
 
 .app-header__menu,
@@ -12471,7 +12471,7 @@ button,
 }
 
 .app-header.header-text-light .app-header__logo .logo-src {
-    background: url(assets/images/logo.png)
+    background: url(../images/logo.png);
 }
 
 .app-header.header-text-light .app-header__mobile-menu .hamburger-inner,
@@ -12569,7 +12569,7 @@ button,
 }
 
 .app-header.header-text-dark .app-header__logo .logo-src {
-    background: url(assets/images/logo-inverse.png)
+    background: url(../images/logo-inverse.png)
 }
 
 .app-sidebar {
@@ -12848,7 +12848,7 @@ button,
 }
 
 .app-sidebar.sidebar-text-light .app-header__logo .logo-src {
-    background: url(assets/images/logo.png)
+    background: url(../images/logo.png);
 }
 
 .app-sidebar.sidebar-text-light .app-header__logo .hamburger-inner,
@@ -22569,13 +22569,13 @@ legend {
 .app-logo {
     height: 23px;
     width: 97px;
-    background: url(assets/images/logo-inverse.png)
+    background: url(../images/logo-inverse.png)
 }
 
 .app-logo-inverse {
     height: 23px;
     width: 97px;
-    background: url(assets/images/logo.png)
+    background: url(../images/logo.png);
 }
 
 .app-login-box .app-logo {
@@ -37073,7 +37073,7 @@ button.toast-close-button {
 }
 
 .slick-loading .slick-list {
-    background: #fff slick-image-url(assets/images/ajax-loader.gif) center center no-repeat
+    background: #fff slick-image-url(../images/ajax-loader.gif) center center no-repeat
 }
 
 .slick-prev,
