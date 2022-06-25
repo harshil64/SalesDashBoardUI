@@ -22913,8 +22913,8 @@ legend {
     font-style: normal;
     font-weight: 900;
     font-display: block;
-    src: url(assets/fonts/fa-solid-900.eot);
-    src: url(assets/fonts/fa-solid-900d41d.eot?#iefix) format("embedded-opentype"), url(assets/fonts/fa-solid-900.woff2) format("woff2"), url(assets/fonts/fa-solid-900.woff) format("woff"), url(assets/fonts/fa-solid-900.ttf) format("truetype"), url(assets/fonts/fa-solid-900.svg#fontawesome) format("svg")
+    src: url(../fonts/fa-solid-900.eot);
+    src: url(../fonts/fa-solid-900d41d.eot?#iefix) format("embedded-opentype"), url(../fonts/fa-solid-900.woff2) format("woff2"), url(../fonts/fa-solid-900.woff) format("woff"), url(../fonts/fa-solid-900.ttf) format("truetype"), url(../fonts/fa-solid-900.svg#fontawesome) format("svg")
 }
 
 .fa,
@@ -28912,7 +28912,7 @@ legend {
 @font-face {
     font-family: ionicons;
     src: url(assets/fonts/ionicons.eot);
-    src: url(assets/fonts/ionicons.eot#iefix) format("embedded-opentype"), url(assets/fonts/ionicons.ttf) format("truetype"), url(assets/fonts/ionicons.woff) format("woff"), url(assets/fonts/ionicons.svg#Ionicons) format("svg");
+    src: url(assets/fonts/ionicons.eot#iefix) format("embedded-opentype"), url(../fonts/ionicons.ttf) format("truetype"), url(../fonts/ionicons.woff) format("woff"), url(../fonts/ionicons.svg#Ionicons) format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -32831,9 +32831,9 @@ legend {
     background: url(assets/fonts/CZ.svg) no-repeat
 }
 
-.DE {
+/* .DE {
     background: url(assets/fonts/DE.svg) no-repeat
-}
+} */
 
 .DJ {
     background: url(assets/fonts/DJ.svg) no-repeat
@@ -39335,8 +39335,8 @@ div.fixed-table-scroll-outer {
 
 @font-face {
     font-family: linearicons-free;
-    src: url(assets/fonts/Linearicons-Free.eot);
-    src: url(assets/fonts/Linearicons-Free.eot?#iefixw118d) format("embedded-opentype"), url(assets/fonts/Linearicons-Free.woff2) format("woff2"), url(assets/fonts/Linearicons-Free.woff) format("woff"), url(assets/fonts/Linearicons-Free.ttf) format("truetype"), url(assets/fonts/Linearicons-Free.svg#Linearicons-Free) format("svg");
+    src: url(../fonts/Linearicons-Free.eot);
+    src: url(../fonts/Linearicons-Free.eot?#iefixw118d) format("embedded-opentype"), url(../fonts/Linearicons-Free.woff2) format("woff2"), url(../fonts/Linearicons-Free.woff) format("woff"), url(../fonts/Linearicons-Free.ttf) format("truetype"), url(../fonts/Linearicons-Free.svg#Linearicons-Free) format("svg");
     font-weight: 400;
     font-style: normal
 }
@@ -40038,7 +40038,7 @@ div.fixed-table-scroll-outer {
 @font-face {
     font-family: pe-icon-7-stroke;
     src: url(assets/fonts/Pe-icon-7-stroke.eot);
-    src: url(assets/fonts/Pe-icon-7-stroke.eot?#iefixd7yf1v) format("embedded-opentype"), url(assets/fonts/Pe-icon-7-stroke.woff) format("woff"), url(assets/fonts/Pe-icon-7-stroke.ttf) format("truetype"), url(assets/fonts/Pe-icon-7-stroke.svg#Pe-icon-7-stroke) format("svg");
+    src: url(assets/fonts/Pe-icon-7-stroke.eot?#iefixd7yf1v) format("embedded-opentype"), url(../fonts/Pe-icon-7-stroke.woff) format("woff"), url(../fonts/Pe-icon-7-stroke.ttf) format("truetype"), url(../fonts/Pe-icon-7-stroke.svg#Pe-icon-7-stroke) format("svg");
     font-weight: 400;
     font-style: normal
 }
