@@ -18,7 +18,7 @@
                                         <span>Please sign in to your account below.</span>
                                     </h4>
                                 </div>
-                                <form class="">
+                                <form class="" id="formAuthentication" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
                                     <div class="form-row">
                                         <div class="col-md-12">
                                             <div class="position-relative form-group">
@@ -27,7 +27,14 @@
                                                 </h5>
                                                 <input name="email" id="exampleEmail"
                                                     placeholder="Enter your Email here..." type="email"
+                                                    formControlName="useremail"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.useremail.errors }"
                                                     class="form-control">
+                                                <div *ngIf="submitted && f.useremail.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.useremail.errors.required">Email is required</div>
+                                                    <div *ngIf="f.useremail.errors.email">Email must be a valid email
+                                                        address</div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="col-md-12">
@@ -37,12 +44,22 @@
                                                 </h5>
                                                 <input name="password" id="examplePassword"
                                                     placeholder="Enter your Password here..." type="password"
+                                                    formControlName="userpassword"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.userpassword.errors }"
                                                     class="form-control">
+                                                <div *ngIf="submitted && f.userpassword.errors"
+                                                    class="invalid-feedback">
+                                                    <div *ngIf="f.userpassword.errors.required">Password is required
+                                                    </div>
+                                                    <div *ngIf="f.userpassword.errors.minlength">Password must be at
+                                                        least 8 characters
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="float-right">
-                                        <button class="btn btn-primary btn-lg">Login to Dashboard</button>
+                                        <button class="btn btn-primary btn-lg" type="submit">Login to Dashboard</button>
                                     </div>
                                 </form>
                             </div>
