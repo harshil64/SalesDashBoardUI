@@ -1,0 +1,78 @@
+<div class="app-container app-theme-white body-tabs-shadow">
+    <div class="app-container">
+        <div class="h-100 bg-plum-plate bg-animation">
+            <div class="d-flex h-100 justify-content-center align-items-center">
+                <div class="mx-auto app-login-box col-md-8">
+                    <div class="mx-auto mb-3"></div>
+                    <div class="modal-dialog w-100 mx-auto">
+                        <div class="modal-content">
+                            <div class="modal-body">
+                                <div style="text-align:center;">
+                                    <div>
+                                        <img src="../../assets/images/inkquills-logo.png" width="200" alt="">
+                                    </div>
+                                </div>
+                                <div class="h5 modal-title text-center">
+                                    <h4 class="mt-3">
+                                        <div>Welcome to InkQuills Dashboard!</div>
+                                        <span>Please sign in to your account below.</span>
+                                    </h4>
+                                </div>
+                                <form class="" id="formAuthentication" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                                    <div class="form-row">
+                                        <div class="col-md-12">
+                                            <div class="position-relative form-group">
+                                                <h5 class="card-title">
+                                                    <label for="exampleEmail" class="">Email</label>
+                                                </h5>
+                                                <input name="email" id="exampleEmail"
+                                                    placeholder="Enter your Email here..." type="email"
+                                                    formControlName="useremail"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.useremail.errors }"
+                                                    class="form-control">
+                                                <div *ngIf="submitted && f.useremail.errors" class="invalid-feedback">
+                                                    <div *ngIf="f.useremail.errors.required">Email is required</div>
+                                                    <div *ngIf="f.useremail.errors.email">Email must be a valid email
+                                                        address</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
+                                            <div class="position-relative form-group">
+                                                <h5 class="card-title">
+                                                    <label for="examplePassword" class="">Password</label>
+                                                </h5>
+                                                <input name="password" id="examplePassword"
+                                                    placeholder="Enter your Password here..." type="password"
+                                                    formControlName="userpassword"
+                                                    [ngClass]="{ 'is-invalid': submitted && f.userpassword.errors }"
+                                                    class="form-control">
+                                                <div *ngIf="submitted && f.userpassword.errors"
+                                                    class="invalid-feedback">
+                                                    <div *ngIf="f.userpassword.errors.required">Password is required
+                                                    </div>
+                                                    <div *ngIf="f.userpassword.errors.minlength">Password must be at
+                                                        least 8 characters
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="float-right">
+                                        <button class="btn btn-primary btn-lg" type="submit">Login to Dashboard</button>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer clearfix">
+                                <div class="float-left">
+                                    <a href="javascript:void(0);" class="btn-lg btn btn-link">Forgot Password?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-center text-white opacity-8 mt-3">Copyright © InkQuills 2022</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
