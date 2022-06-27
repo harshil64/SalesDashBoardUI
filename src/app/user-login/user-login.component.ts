@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup,  Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { WebAPIService } from '../Services/web-api.service';
 
 @Component({
   selector: 'app-user-login',
@@ -11,7 +12,7 @@ export class UserLoginComponent implements OnInit {
 
   loginForm!: FormGroup;
   submitted = false;
-  constructor(private formBuilder: FormBuilder, private router: Router) { 
+  constructor(private formBuilder: FormBuilder, private router: Router, private webapi: WebAPIService) { 
   }
 
   ngOnInit(): void {
@@ -33,7 +34,13 @@ export class UserLoginComponent implements OnInit {
       return;
     }
 
-    console.log(this.loginForm.value);
-    this.router.navigateByUrl('/home/dashboard')
+    //console.log(this.loginForm.value);
+    let loginvalue = this.webapi.login(this.loginForm.value);
+
+    loginvalue.subscribe((data) => {
+      console.log(data);
+    })
+
+    //this.router.navigateByUrl('/home/dashboard')
   }
 }
