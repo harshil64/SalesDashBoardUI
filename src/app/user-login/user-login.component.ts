@@ -34,13 +34,18 @@ export class UserLoginComponent implements OnInit {
       return;
     }
 
-    //console.log(this.loginForm.value);
-    let loginvalue = this.webapi.login(this.loginForm.value);
+    let loginresult = this.webapi.login(this.loginForm.value);
 
-    loginvalue.subscribe((data) => {
+    loginresult.subscribe((data: any) => {
       console.log(data);
-    })
 
-    //this.router.navigateByUrl('/home/dashboard')
+      if(data.statusCode == 400)
+      {
+        console.log(data.validation[0].title);
+      }
+      else{
+        this.router.navigateByUrl('/home/dashboard')
+      }
+    })
   }
 }
