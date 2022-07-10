@@ -6,11 +6,12 @@ import { Injectable } from '@angular/core';
 })
 export class WebAPIService {
 
+  private url = "https://localhost:44367/Login/AuthorLogin";
   constructor(private http: HttpClient) { }
 
   login(logindetails: any) {
-    let url = "https://localhost:44367/Login/AuthorLogin";
-    let obs = this.http.post(url, logindetails);
+    
+    let obs = this.http.post(this.url, logindetails);
     return obs;
   }
 }
