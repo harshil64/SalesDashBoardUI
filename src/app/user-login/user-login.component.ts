@@ -37,13 +37,12 @@ export class UserLoginComponent implements OnInit {
     let loginresult = this.webapi.login(this.loginForm.value);
 
     loginresult.subscribe((data: any) => {
-      console.log(data);
-
       if(data.statusCode == 400)
       {
         console.log(data.validation[0].title);
       }
       else{
+        sessionStorage.setItem('result', JSON.stringify(data.result));
         this.router.navigateByUrl('/home/dashboard')
       }
     })
