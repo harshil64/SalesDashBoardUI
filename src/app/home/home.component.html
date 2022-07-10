@@ -149,8 +149,8 @@
                                 <i class="metismenu-icon pe-7s-rocket"></i>Dashboard
                             </a>
                         </li>
-                        <li class="app-sidebar__heading">Authors</li>
-                        <li>
+                        <li class="app-sidebar__heading" *ngIf="Admin">Authors</li>
+                        <li *ngIf="Admin">
                             <a href="#">
                                 <i class="metismenu-icon pe-7s-diamond"></i> Authors
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
@@ -175,7 +175,7 @@
                                 <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                             </a>
                             <ul>
-                                <li>
+                                <li *ngIf="Admin">
                                     <a href="elements-dropdowns.html">
                                         <i class="metismenu-icon"></i>Add New Book
                                     </a>
@@ -198,7 +198,7 @@
                                         <i class="metismenu-icon"></i>Book Sales
                                     </a>
                                 </li>
-                                <li>
+                                <li *ngIf="Admin">
                                     <a href="elements-icons.html">
                                         <i class="metismenu-icon"></i>Import Sales
                                     </a>
@@ -217,7 +217,7 @@
                                         <i class="metismenu-icon"></i>Royalty Payments
                                     </a>
                                 </li>
-                                <li>
+                                <li *ngIf="Admin">
                                     <a href="elements-icons.html">
                                         <i class="metismenu-icon"></i>Import Royalty Payments
                                     </a>

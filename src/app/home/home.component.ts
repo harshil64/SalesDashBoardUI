@@ -11,6 +11,7 @@ export class HomeComponent implements OnInit {
 
   Name: string;
   Role: string;
+  Admin: boolean;
 
   constructor(private router: Router) { 
     if (sessionStorage.getItem('result') == null) {
@@ -20,6 +21,10 @@ export class HomeComponent implements OnInit {
       let result = JSON.parse(sessionStorage.getItem('result') || '{}');
       this.Name = result.loggedInUser.name;
       this.Role = result.loggedInUser.role;
+
+      if(this.Role=="Author"){
+        this.Admin = false;
+      }
     }
   }
 
