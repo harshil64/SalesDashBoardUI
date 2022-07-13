@@ -23,12 +23,7 @@ export class DashboardComponent implements OnInit {
     else {
       let dashboardCall = this.webapi.getDashboard();
       dashboardCall.subscribe((data: any) => {
-        if (data.statusCode == 400) {
-          console.log(data.validation[0].title);
-        }
-        else {
-          this.dashboarddata = data.result;
-        }
+        this.dashboarddata = data.result;
       })
     }
   }
