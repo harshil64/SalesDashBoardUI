@@ -17,15 +17,11 @@ export class DashboardComponent implements OnInit {
   private token: any;
 
   constructor(private router: Router, private webapi: WebAPIService) {
-    if (sessionStorage.getItem('result') == null) {
-      this.router.navigateByUrl('/login')
-    }
-    else {
-      let dashboardCall = this.webapi.getDashboard();
-      dashboardCall.subscribe((data: any) => {
-        this.dashboarddata = data.result;
-      })
-    }
+
+    let dashboardCall = this.webapi.getDashboard();
+    dashboardCall.subscribe((data: any) => {
+      this.dashboarddata = data.result;
+    })
   }
 
   ngOnInit(): void {
