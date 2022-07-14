@@ -9,13 +9,15 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonInterceptor } from './Services/common.interceptor';
+import { BooksComponent } from './books/books.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UserLoginComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    BooksComponent
   ],
   imports: [
     BrowserModule,

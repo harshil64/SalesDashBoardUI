@@ -1,0 +1,46 @@
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        <div class="app-page-title bg-heavy-rain">
+            <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                    <div class="page-title-icon">
+                        <i class="pe-7s-notebook icon-gradient bg-mixed-hopes"></i>
+                    </div>
+                    <div>Books
+                        <div class="page-title-subheading">All My Books</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tabs-animation">
+            <div class="row">
+                <div class="col-md-6 col-xl-2" *ngFor="let book of mybooks; let i = index" [attr.data-index]="i">
+                    <div class="main-card mb-3 card">
+                        <div class="card-body mb-3">
+                            <h5 class="card-title text-center">{{book.title}}</h5>
+                            <img [src]="getImage(book.image)" alt="" style="width: -webkit-fill-available;">
+                            <hr />
+                            <span class="text-center" style="display: grid;"><button class="btn btn-success btn-lg">Details</button></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-wrapper-footer">
+        <div class="app-footer">
+            <div class="app-footer__inner">
+                <div class="app-footer-left">
+                    <div class="footer-dots">
+                        <div class="dots-separator"></div>
+                        <div class="dropdown">
+                            <p class="text-muted" style="margin: auto !important;">Copyright © 2022 InkQuills Publishing
+                                House</p>
+                        </div>
+                        <div class="dots-separator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

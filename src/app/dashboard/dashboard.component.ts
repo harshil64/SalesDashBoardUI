@@ -16,7 +16,7 @@ export class DashboardComponent implements OnInit {
   dashboarddata: DashboardModel;
   private token: any;
 
-  constructor(private router: Router, private webapi: WebAPIService) {
+  constructor(private webapi: WebAPIService) {
 
     let dashboardCall = this.webapi.getDashboard();
     dashboardCall.subscribe((data: any) => {

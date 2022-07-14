@@ -12,10 +12,10 @@ export class HomeComponent implements OnInit {
 
   Name: string;
   Role: string;
-  Admin: boolean;
+  Admin: boolean = false;
   ImageSRC: string;
 
-  constructor(private router: Router, private sanitizer:DomSanitizer) {
+  constructor(private router: Router, private sanitizer: DomSanitizer) {
     if (sessionStorage.getItem('result') == null) {
       this.router.navigateByUrl('/login')
     }
@@ -25,8 +25,8 @@ export class HomeComponent implements OnInit {
       this.Role = result.loggedInUser.role;
       this.ImageSRC = result.loggedInUser.image;
 
-      if (this.Role == "Author") {
-        this.Admin = false;
+      if (this.Role == "Publisher") {
+        this.Admin = true;
       }
     }
   }
@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getImage(){
+  getImage() {
     return this.sanitizer.bypassSecurityTrustResourceUrl(this.ImageSRC);
-}
+  }
 
 }
