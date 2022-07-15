@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { BooksModel } from '../Models/BookModel';
 
 @Injectable({
   providedIn: 'root'
@@ -9,7 +10,8 @@ export class WebAPIService {
   private base_url = "http://localhost:8009/";
   private UserLogin_url = "Login/AuthorLogin";
   private Dashboard_url = "Dashboard/DashboardDetails";
-  private Book_url = "Books/GetMyBooks";
+  private Books_url = "Books/GetMyBooks";
+  private BookDetails_url = "Books/BookDetails"
 
   constructor(private http: HttpClient) { }
 
@@ -29,7 +31,13 @@ export class WebAPIService {
   }
 
   getMyBooks() {
-    let obs = this.http.get(this.base_url + this.Book_url);
+    let obs = this.http.get(this.base_url + this.Books_url);
+    return obs;
+  }
+
+  getBookDetails(BookId: any) {
+    let url = this.base_url + this.BookDetails_url;
+    let obs = this.http.post<BooksModel>(url, BookId);
     return obs;
   }
 }

@@ -10,6 +10,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CommonInterceptor } from './Services/common.interceptor';
 import { BooksComponent } from './books/books.component';
+import { BookDetailsComponent } from './book-details/book-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { BooksComponent } from './books/books.component';
     UserLoginComponent,
     HomeComponent,
     DashboardComponent,
-    BooksComponent
+    BooksComponent,
+    BookDetailsComponent
   ],
   imports: [
     BrowserModule,
