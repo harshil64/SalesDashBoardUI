@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { BooksModel } from '../Models/BookModel';
+import { WebAPIService } from '../Services/web-api.service';
 
 @Component({
   selector: 'app-book-details',
@@ -10,14 +12,21 @@ import { ActivatedRoute } from '@angular/router';
   }
 })
 export class BookDetailsComponent implements OnInit {
-  myParam: any;
-  constructor(private route: ActivatedRoute) { }
+  BookId: any;
+  Book: BooksModel;
+
+  constructor(private route: ActivatedRoute, private webapi: WebAPIService) { 
+    this.route.params.subscribe(params => {
+      this.BookId = params.id;
+    });
+
+    let getMyBooksCall = this.webapi.getBookDetails(this.BookId);
+    getMyBooksCall.subscribe((data: any) => {
+      this.Book = data.result;
+    })
+  }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.myParam = params.id;
-      console.log(this.myParam);
-    });
   }
 
 }
