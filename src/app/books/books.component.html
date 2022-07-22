@@ -21,7 +21,7 @@
                             <img [src]="getImage(book.image)" alt="" style="width: -webkit-fill-available;">
                             <hr />
                             <span class="text-center" style="display: grid;">
-                                <button class="btn btn-info btn-lg" [skipLocationChange]="true" [routerLink]="['../bookDetails', book.bookId]">Details</button>
+                                <button class="btn btn-info btn-lg" [skipLocationChange]="false" [routerLink]="['../bookDetails', book.bookId]">Details</button>
                             </span>
                         </div>
                     </div>
