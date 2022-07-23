@@ -1,0 +1,118 @@
+<div class="app-main__outer">
+    <div class="app-main__inner">
+        <div class="app-page-title bg-heavy-rain">
+            <div class="page-title-wrapper">
+                <div class="page-title-heading">
+                    <div class="page-title-icon">
+                        <i class="pe-7s-notebook icon-gradient bg-mixed-hopes"></i>
+                    </div>
+                    <div>Book Sales
+                        <div class="page-title-subheading">All Sales</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <table style="width: 100%;" id="example"
+                                class="table table-hover table-striped table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Title</th>
+                                        <th>ISBN</th>
+                                        <th>Order Id</th>
+                                        <th>Channel</th>
+                                        <th>Date</th>
+                                        <th>MRP</th>
+                                        <th>Quantity</th>
+                                        <th>Royalty</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let sale of allSales; let i = index" [attr.data-index]="i">
+                                        <td>{{sale.title}}</td>
+                                        <td>{{sale.isbn}}</td>
+                                        <td>{{sale.orderId}}</td>
+                                        <td>{{sale.channel}}</td>
+                                        <td>{{sale.date | date: 'dd/MMM/yyyy'}}</td>
+                                        <td>{{sale.mrp}}</td>
+                                        <td>{{sale.quantity}}</td>
+                                        <td>{{sale.royalty}}</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <h5 class="card-title">Table responsive</h5>
+                            <div class="table-responsive">
+                                <table class="mb-0 table table-hover table-striped table-bordered">
+                                    <thead>
+                                        <tr>
+                                            <th data-sortable="true">Title</th>
+                                            <th data-sortable="true">ISBN</th>
+                                            <th data-sortable="true">Order Id</th>
+                                            <th data-sortable="true">Channel</th>
+                                            <th data-sortable="true">Date</th>
+                                            <th data-sortable="true">MRP</th>
+                                            <th data-sortable="true">Quantity</th>
+                                            <th data-sortable="true">Royalty</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let sale of allSales; let i = index" [attr.data-index]="i">
+                                            <td>{{sale.title}}</td>
+                                            <td>{{sale.isbn}}</td>
+                                            <td>{{sale.orderId}}</td>
+                                            <td>{{sale.channel}}</td>
+                                            <td>{{sale.date | date: 'dd/MMM/yyyy'}}</td>
+                                            <td>{{sale.mrp}}</td>
+                                            <td>{{sale.quantity}}</td>
+                                            <td>{{sale.royalty}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="main-card mb-3 card">
+                        <div class="card-body">
+                            <table data-toggle="table"
+                                data-url="https://api.github.com/users/wenzhixin/repos?type=owner&sort=full_name&direction=asc&per_page=100&page=1"
+                                data-sort-name="stargazers_count" data-sort-order="desc">
+                                <thead>
+                                    <tr>
+                                        <th data-field="name" data-sortable="true"> Name </th>
+                                        <th data-field="stargazers_count" data-sortable="true"> Stars </th>
+                                        <th data-field="forks_count" data-sortable="true"> Forks </th>
+                                        <th data-field="description" data-sortable="true"> Description </th>
+                                    </tr>
+                                </thead>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="app-wrapper-footer">
+        <div class="app-footer">
+            <div class="app-footer__inner">
+                <div class="app-footer-left">
+                    <div class="footer-dots">
+                        <div class="dots-separator"></div>
+                        <div class="dropdown">
+                            <p class="text-muted" style="margin: auto !important;">Copyright © 2022 InkQuills Publishing
+                                House</p>
+                        </div>
+                        <div class="dots-separator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
