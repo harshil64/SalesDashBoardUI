@@ -1,0 +1,1 @@
+{"result":{"totalRoyalty":594,"totalRoyaltyPaid":450,"pendingRoyalty":144,"royaltyPayments":[{"amount":250,"date":"2022-06-15T00:00:00","transactionDetails":"2614L05B60050321"},{"amount":200,"date":"2022-06-14T00:00:00","transactionDetails":"2614L05A60050316"}]},"statusCode":200,"message":"Royalty Transactions Returned Successfully."}
