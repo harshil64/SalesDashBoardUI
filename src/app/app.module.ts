@@ -12,6 +12,7 @@ import { CommonInterceptor } from './Services/common.interceptor';
 import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BooksalesComponent } from './booksales/booksales.component';
+import { RoyaltyPaymentsComponent } from './royalty-payments/royalty-payments.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { BooksalesComponent } from './booksales/booksales.component';
     DashboardComponent,
     BooksComponent,
     BookDetailsComponent,
-    BooksalesComponent
+    BooksalesComponent,
+    RoyaltyPaymentsComponent
   ],
   imports: [
     BrowserModule,
