@@ -13,6 +13,8 @@ import { BooksComponent } from './books/books.component';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { BooksalesComponent } from './booksales/booksales.component';
 import { RoyaltyPaymentsComponent } from './royalty-payments/royalty-payments.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -29,7 +31,9 @@ import { RoyaltyPaymentsComponent } from './royalty-payments/royalty-payments.co
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [
     { provide: HTTP_INTERCEPTORS, useClass: CommonInterceptor, multi: true },

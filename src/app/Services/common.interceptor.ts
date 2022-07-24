@@ -9,15 +9,18 @@ import {
 import { catchError, Observable, throwError } from 'rxjs';
 import { WebAPIService } from '../Services/web-api.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
+import { finalize } from 'rxjs/operators';
 
 @Injectable()
 export class CommonInterceptor implements HttpInterceptor {
 
   auth_token: string;
-  constructor(private webapi: WebAPIService, public router: Router) {
+  constructor(private webapi: WebAPIService, public router: Router, private SpinnerService: NgxSpinnerService) {
   }
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    this.SpinnerService.show(); 
     this.auth_token = this.webapi.getToken();
     const tokenized_request = request.clone({
       setHeaders: {
@@ -48,7 +51,12 @@ export class CommonInterceptor implements HttpInterceptor {
           console.error("some thing else happened");
         }
         return throwError(error.message);
-      })
+      }),
+      finalize(
+        () => {
+          this.SpinnerService.hide();
+        }
+      ) 
     )
   }
 }

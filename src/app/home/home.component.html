@@ -24,8 +24,7 @@
         </div>
         <div class="app-header__menu">
             <span>
-                <button type="button"
-                    class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
+                <button type="button" class="btn-icon btn-icon-only btn btn-primary btn-sm mobile-toggle-header-nav">
                     <span class="btn-icon-wrapper">
                         <i class="fa fa-ellipsis-v fa-w-6"></i>
                     </span>
@@ -41,8 +40,7 @@
                                 <div class="btn-group">
                                     <a data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                                         class="p-0 btn">
-                                        <img width="42" class="rounded-circle" [src]="getImage()"
-                                            alt="">
+                                        <img width="42" class="rounded-circle" [src]="getImage()" alt="">
                                         <i class="fa fa-angle-down ml-2 opacity-8"></i>
                                     </a>
                                     <div tabindex="-1" role="menu" aria-hidden="true"
@@ -57,7 +55,7 @@
                                                         <div class="widget-content-wrapper">
                                                             <div class="widget-content-left mr-3">
                                                                 <img width="42" class="rounded-circle"
-                                                                [src]="getImage()" alt="">
+                                                                    [src]="getImage()" alt="">
                                                             </div>
                                                             <div class="widget-content-left">
                                                                 <div class="widget-heading">{{Name}}</div>
@@ -84,7 +82,8 @@
                                                     </li>
                                                     <li class="nav-item">
                                                         <a href="javascript:void(0);" class="nav-link">Support
-                                                            <div class="ml-auto badge badge-warning">0 Open Tickets</div>
+                                                            <div class="ml-auto badge badge-warning">0 Open Tickets
+                                                            </div>
                                                         </a>
                                                     </li>
                                                 </ul>
@@ -232,3 +231,6 @@
         <router-outlet></router-outlet>
     </div>
 </div>
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="timer" [fullScreen]="true">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>
