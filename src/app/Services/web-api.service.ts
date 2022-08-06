@@ -13,6 +13,7 @@ export class WebAPIService {
   private BookDetails_url = "Books/GetBookDetails";
   private BookSales_url = "Sales/GetAllSalesForAuthor";
   private RoyaltyTransactions_url = "Royalty/GetRoyaltyTransactionsForAuthor";
+  private Profile_url = "Author/AuthorDetails";
 
   constructor(private http: HttpClient) { }
 
@@ -49,6 +50,11 @@ export class WebAPIService {
 
   GetRoyaltyTransactionsForAuthor() {
     let obs = this.http.get(this.base_url + this.RoyaltyTransactions_url);
+    return obs;
+  }
+
+  GetAuthorProfile(){
+    let obs = this.http.get(this.base_url + this.Profile_url);
     return obs;
   }
 }

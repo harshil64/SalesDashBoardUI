@@ -15,6 +15,7 @@ import { BooksalesComponent } from './booksales/booksales.component';
 import { RoyaltyPaymentsComponent } from './royalty-payments/royalty-payments.component';
 import { NgxSpinnerModule } from 'ngx-spinner';
 import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
     BooksComponent,
     BookDetailsComponent,
     BooksalesComponent,
-    RoyaltyPaymentsComponent
+    RoyaltyPaymentsComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,

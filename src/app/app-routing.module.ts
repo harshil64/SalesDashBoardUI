@@ -5,6 +5,7 @@ import { BooksComponent } from './books/books.component';
 import { BooksalesComponent } from './booksales/booksales.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
 import { RoyaltyPaymentsComponent } from './royalty-payments/royalty-payments.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 
@@ -17,8 +18,9 @@ const routes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'books', component: BooksComponent },
       { path: 'bookDetails/:id', component: BookDetailsComponent },
-      { path: 'booksales', component: BooksalesComponent},
-      { path: 'royaltyPayments', component: RoyaltyPaymentsComponent}
+      { path: 'booksales', component: BooksalesComponent },
+      { path: 'royaltyPayments', component: RoyaltyPaymentsComponent },
+      { path: 'profile', component: ProfileComponent }
     ]
   }
 ];
