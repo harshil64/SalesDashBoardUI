@@ -14,6 +14,7 @@ export class HomeComponent implements OnInit {
   Role: string;
   Admin: boolean = false;
   ImageSRC: string;
+  ProfilePercentage: number;
 
   constructor(private router: Router, private sanitizer: DomSanitizer) {
     if (sessionStorage.getItem('result') == null) {
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit {
       this.Name = result.loggedInUser.name;
       this.Role = result.loggedInUser.role;
       this.ImageSRC = result.loggedInUser.image;
+      this.ProfilePercentage = result.loggedInUser.profilePercentage;
 
       if (this.Role == "Publisher") {
         this.Admin = true;

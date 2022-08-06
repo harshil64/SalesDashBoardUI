@@ -6,6 +6,7 @@ export interface ProfileModel {
     image: string;
     email: string;
     mobile: string;
+    bio:string;
     addressLine1: string;
     addressLine2: string;
     city: string;
