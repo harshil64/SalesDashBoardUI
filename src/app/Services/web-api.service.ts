@@ -23,38 +23,30 @@ export class WebAPIService {
   }
 
   login(logindetails: any) {
-    let obs = this.http.post(this.base_url + this.UserLogin_url, logindetails);
-    return obs;
+    return this.http.get("./assets/API Responses/Login_AuthorLogin.json");
   }
 
   getDashboard() {
-    let obs = this.http.get(this.base_url + this.Dashboard_url);
-    return obs;
+    return this.http.get("./assets/API Responses/Dashboard_DashboardDetails.json");
   }
 
   getMyBooks() {
-    let obs = this.http.get(this.base_url + this.Books_url);
-    return obs;
+    return this.http.get("./assets/API Responses/Books_GetMyBooks.json");
   }
 
   getBookDetails(BookId: any) {
-    let url = this.base_url + this.BookDetails_url + "?BookId=" + BookId;
-    let obs = this.http.get<any>(url, BookId);
-    return obs;
+    return this.http.get("./assets/API Responses/Books_GetBookDetails_bookid_4.json");
   }
 
   getAllSalesForAuthor() {
-    let obs = this.http.get(this.base_url + this.BookSales_url);
-    return obs;
+    return this.http.get("./assets/API Responses/Sales_GetAllSalesForAuthor.json");
   }
 
   GetRoyaltyTransactionsForAuthor() {
-    let obs = this.http.get(this.base_url + this.RoyaltyTransactions_url);
-    return obs;
+    return this.http.get("./assets/API Responses/Royalty_GetRoyaltyTransactionsForAuthor.json");
   }
 
   GetAuthorProfile(){
-    let obs = this.http.get(this.base_url + this.Profile_url);
-    return obs;
+    return this.http.get("./assets/API Responses/AuthorProfile.json");
   }
 }
